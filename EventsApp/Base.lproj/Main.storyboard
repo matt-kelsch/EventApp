@@ -1,7 +1,94 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="PiN-fd-CZe">
+            <objects>
+                <viewController id="e0h-Zj-b0o" customClass="LoginViewController" customModule="EventsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vOt-9z-W1p"/>
+                        <viewControllerLayoutGuide type="bottom" id="zgu-ZV-O3u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NBT-Jr-374">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hhq-Ap-6OE">
+                                <rect key="frame" x="175" y="138" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djH-Gi-Cw5">
+                                <rect key="frame" x="227" y="322" width="97" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.0085055443550000002" green="0.30812121980000001" blue="1" alpha="0.75" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TKL-dk-0Dz">
+                                <rect key="frame" x="175" y="251" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hhq-Ap-6OE" firstAttribute="leading" secondItem="NBT-Jr-374" secondAttribute="leading" constant="200" id="7iG-5H-JQa"/>
+                            <constraint firstItem="TKL-dk-0Dz" firstAttribute="leading" secondItem="NBT-Jr-374" secondAttribute="leading" constant="200" id="9yb-ya-9vy"/>
+                            <constraint firstAttribute="trailing" secondItem="djH-Gi-Cw5" secondAttribute="trailing" constant="200" id="H2a-f7-IA3"/>
+                            <constraint firstAttribute="trailing" secondItem="Hhq-Ap-6OE" secondAttribute="trailing" constant="200" id="bNb-ua-1oc"/>
+                            <constraint firstItem="djH-Gi-Cw5" firstAttribute="leading" secondItem="NBT-Jr-374" secondAttribute="leading" constant="200" id="hSw-UT-eao"/>
+                            <constraint firstAttribute="trailing" secondItem="TKL-dk-0Dz" secondAttribute="trailing" constant="200" id="mgg-NW-rs5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nhu-3D-M6L"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IVF-Wi-SA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872" y="277"/>
+        </scene>
+        <!--Event View Controller-->
+        <scene sceneID="1qU-pt-S77">
+            <objects>
+                <viewController id="svD-na-vV2" customClass="EventViewController" customModule="EventsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xE1-5J-Tdd"/>
+                        <viewControllerLayoutGuide type="bottom" id="msx-2i-7KV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DgI-dU-mBX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="sN6-Sq-oJh" kind="presentation" identifier="EventsToRegisterPlan" id="Ojx-89-u3Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aYS-VU-FF1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="962"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="G12-G7-hH7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sN6-Sq-oJh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aZt-Bj-ZQ0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e0h-Zj-b0o" kind="relationship" relationship="rootViewController" id="Fru-Gp-zwm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SCo-Na-ww5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="277"/>
+        </scene>
+    </scenes>
 </document>
